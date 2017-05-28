@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context="de.dabbeljubee.blutdruckstatistik.MainActivity$PlaceholderFragment">
+
+    <TextView
+            android:id="@+id/section_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blutdruck Verlauf:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+
+    <TableRow
+            android:id="@+id/list_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/section_label"
+            android:layout_alignParentStart="true">
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.48"
+                    android:text="Messzeitpunkt       "
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textAlignment="textStart"/>
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:text="SYS"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textAlignment="textEnd"/>
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:text="DIA"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textAlignment="textEnd"/>
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.15"
+                    android:text="Puls"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textAlignment="textEnd"/>
+        <TextView
+                android:gravity="right"
+                android:layout_weight="0.07"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textAlignment="textEnd"/>
+    </TableRow>
+    <ListView
+            android:id="@+id/data_list"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/list_header"
+            android:layout_alignParentStart="true" android:headerDividersEnabled="true" android:layout_marginTop="10dp"
+            android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbarStyle="outsideInset"
+            android:layout_height="wrap_content" android:paddingBottom="?attr/actionBarSize"/>
+</RelativeLayout>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<h1>Einführung</h1>
+Blutdruck Statistik ist ein App zur Erfassung und Darstellung von Blutdruckmesswerten. Sie besteht aus drei Masken,
+zwischen denen man durch wischen errreichen kann.
+<h1>Masken</h1>
+<h2>Eingabe</h2>
+Beim Starten der App öffnet sich die Eingabemaske. Der systolische Wert, der diastolische Wert und der Puls können mit
+den Zahlenfeldern eingegeben werden. Der Wert, der gerade editiert wird, ist mit einem Rahmen markiert. Ist der eingegebene
+Wert größer als 35 wird das nächste Feld automatisch aktiviert. Man kann aber auch mit der Pfeiltaste unten links zum nächsten
+Wert wechseln. Hat man sich bertippt kann der aktuelle Wert mit der Löschtaste (unten Mitte) auf Null zurückgesetzt werden.
+Mit der Speichertaste können die Messwerte gespeichert werden. Die Speichertaste ist nur akiv, wenn alle drei Eingabewerte
+einen Wert größer Null anzeigen.<br>
+Jedem Messpunkt wird eine Zeit zugeordnet. Diese besteht aus dem Datum, Stunden und Minuten. Es kann alse nur ein Messwert
+pro Minute abgespeichert werden. Falls in einer Minute zwei Werte eingegeben werden, so wird der ältere überschrieben.
+<h2>Verlauf</h2>
+Durch wischen nach links gelangt man zur Verlaufsmaske. Hier werden alle Blutdruckwerte angezeigt. Der neueste Wert ist der
+erste Wert der Liste, der älteste der letzte.<br>
+Die Werte sind farblich markiert. Niedrige Werte sind blau, normale grün, hohe Werte orange und sehr hohe Werte rot dargestellt.
+Die Farben gehen ineinander über. Die Grenzwerte, die zur Berechnung der Farben genutzt werden, können im Menupunkt Einstellungen
+eingesehen und verändert werden.<br>
+Durch langes antippen einer Zeile öffnet sich eine Maske, mit der der Messpunkt editiert werden kann. Unter anderem ist
+es möglich, einen Kommentar einzugeben. Messwerte mit einem Kommentar werden in der Übersicht mit einem "C" am rechten
+Bildschirmrand gekennzeichnet. Durch antippen des "C" wird der Kommentar angezeigt.
+<h2>Statistik</h2>
+Durch weiteres Wischen nach links kommt man zur Statistikmaske. Hier wird monats- und wochenweise angezeigt, wieviele
+Messwerte in welchem Messbereich lagen. Die Grenzwerte können im Menupunkt Einstellungen geändert werden. Beim ersten
+öffnen wird angezeigt, wie viele Messwerte des Systolischen Werts und des Diastolischen Werts im hohen und sehr hohen Bereich
+liegen. Alternativ können auch die vier Bereiche "sehr hoch", "hoch", "normal", und "niedrig" für einen Messwert angezeigt
+werden. Die geht über die Auswahlbox im oberen Bereich der Maske.
+<h1>Menu</h1>
+<h2>Einstellungen</h2>
+Hier können die Grenzwerte, die in der Verlaufsmaske und in der Statistikmaske benutzt werden, geändert werden. Die geändeten
+Grenzwerte werden gespeichert und werden beim nächsten Start der App wieder benutzt.
+<h2>Filter</h2>
+Hier können die Messwerte gefiltert werden, mit denen die App arbeitet. So kann eine Startdatum und ein Enddatum gesetzt
+werden, eine Startzeit oder eine Endzeit, oder eine Auswahl an Wochentagen. <br>
+So werden z.b. durch setzen des Startdatum 6. Februar 2017 und einer Startzeit 12:00 Uhr nur noch die Messwerte genutzt,
+die nach dem 6. Februar 2017 liegen und nach 12:00 Uhr gemessen wurden. Es können durch Auswahl von Wochentagen auch nur
+Messswerte, die an diesen Tagen gemessen wurden angezeigt, bzw bei der Statistik berücksichtigt werden.
+<h2>Speichern</h2>
+Die Messwerte werden von der App intern gespeichert. Wird die App deinstalliert oder wechselt man zu einem neuen Gerät sind die
+Daten dort nicht mehr zugänglich. Daher gibt es die Möglichkeit sie im "Documents"-Ordner zu speichern. Dort sind sie auch
+für andere Apps oder Programme zugänglich. Die Daten könne im Json-Format oder im CSV-Format gespeichert werden. Die Datei
+heißt dann "measurements.json" oder "measurements.csv".
+<h2>Laden</h2>
+Es können auch ältere Messwerte geladen werden. Auch hier werden die Formate CSV und JSON unterstützt. Dateien, die mit dieser App
+gespeichert wurden, können auch wieder geladen werden. Damit wird der Umzug auf ein neues Gerät ohne Datenverlust ermöglicht.
+Beim Speichern der Daten werden die Filter nicht berücksichtigt, es werden immer alle Daten gespeichert.
+
+CSV Format:<br>
+<pre>
+    dateTime,systolicValue,diastolicValue,pulse,comment
+    2017-02-05T12:00,120,80,60,optionaler kommentar
+    ...
+</pre>
+
+JSON Format () Zeilenumbrüche optional):<br>
+<code>
+<pre>
+    [
+        {
+            "dateTime": "2017-02-06T12:02",
+            "systolicValue": 120,
+            "diastolicValue": 80,
+            "pulse": 60
+        },
+        ...
+        {
+            "dateTime": "2017-08-10T21:21",
+            "systolicValue": 110,
+            "diastolicValue": 70,
+            "pulse": 5
+        }
+    ]
+</pre>
+</code>
+
+<h2>Drucken</h2>
+Alle Daten, die in der Statistik Maske angezeigt werden können, können auch ausgedruckt werden. Beim Drucken werden die Daten
+zeitlich aufsteigend angeordnet. Es werden nur Daten gedruckt, die nicht ausgefiltert werden.
+</body>
+<head>
+    <meta charset="UTF-8">
+    <title>Blutdruck  Statistik</title>
+</head>
+</html>

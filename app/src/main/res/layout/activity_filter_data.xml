@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/container_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+    <GridLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_filter_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:columnCount="3"
+            tools:context="de.dabbeljubee.blutdruckstatistik.FilterDataActivity">
+
+        <TextView
+                android:text="@string/filter_start_date"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:id="@+id/filter_data_start_date_label"
+                android:layout_height="wrap_content"/>
+        <EditText
+                android:id="@+id/filter_data_start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:ems="5" android:cursorVisible="false" android:textIsSelectable="false" android:focusable="false"
+                android:focusableInTouchMode="false"/>
+        <CheckBox
+                android:text="@string/filter_activate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/filter_data_start_date_check"/>
+
+        <TextView
+                android:text="@string/filter_end_date"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:id="@+id/filter_data_end_date_label"
+                android:layout_height="wrap_content"/>
+        <EditText
+                android:id="@+id/filter_data_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:ems="5" android:cursorVisible="false"
+                android:textIsSelectable="false" android:focusable="false" android:focusableInTouchMode="false"/>
+        <CheckBox
+                android:text="@string/filter_activate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/filter_data_end_date_check"/>
+
+        <TextView
+                android:text="@string/filter_start_time"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:id="@+id/filter_data_start_time_label"
+                android:layout_height="wrap_content"/>
+        <EditText
+                android:id="@+id/filter_data_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:ems="5" android:cursorVisible="false" android:textIsSelectable="false" android:focusable="false"
+                android:focusableInTouchMode="false"/>
+        <CheckBox
+                android:text="@string/filter_activate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/filter_data_start_time_check"/>
+
+        <TextView
+                android:text="@string/filter_end_time"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:id="@+id/filter_data_end_time_label"
+                android:layout_height="wrap_content"/>
+        <EditText
+                android:id="@+id/filter_data_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:ems="5" android:cursorVisible="false" android:duplicateParentState="true"
+                android:textIsSelectable="false" android:focusable="false" android:focusableInTouchMode="false"/>
+        <CheckBox
+                android:text="@string/filter_activate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/filter_data_end_time_check"/>
+
+        <TextView
+                android:text="@string/filter_active_weekdays"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"/>
+        <CheckBox
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/filter_show_all_weekdays"
+                android:checked="true"
+                android:onClick="onShowAllWeekdays"/>
+
+        <TextView
+                android:text="@string/filter_monday"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"/>
+        <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/filter_show_monday"
+                android:checked="true"
+                android:onClick="onWeekday"/>
+
+        <TextView
+                android:text="@string/filter_tuesday"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"/>
+        <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/filter_show_tuesday"
+                android:checked="true"
+                android:onClick="onWeekday"/>
+
+        <TextView
+                android:text="@string/filter_wednesday"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"/>
+        <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/filter_show_wednesday"
+                android:checked="true"
+                android:onClick="onWeekday"/>
+
+        <TextView
+                android:text="@string/filter_thursday"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"/>
+        <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/filter_show_thursday"
+                android:checked="true"
+                android:onClick="onWeekday"/>
+
+        <TextView
+                android:text="@string/filter_friday"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"/>
+        <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/filter_show_friday"
+                android:checked="true"
+                android:onClick="onWeekday"/>
+
+        <TextView
+                android:text="@string/filter_saturday"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"/>
+        <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/filter_show_saturday"
+                android:checked="true"
+                android:onClick="onWeekday"/>
+
+        <TextView
+                android:text="@string/filter_sunday"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"/>
+        <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/filter_show_sunday"
+                android:checked="true"
+                android:onClick="onWeekday"/>
+
+    </GridLayout>
+</ScrollView>

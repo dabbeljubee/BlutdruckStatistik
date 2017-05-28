@@ -1,0 +1,51 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="de.dabbeljubee.blutdruckstatistik.MainActivity">
+    <item android:id="@+id/action_settings"
+          android:title="@string/action_settings"
+          android:orderInCategory="100"
+          app:showAsAction="never"/>
+    <item android:id="@+id/filter_settings"
+          android:title="@string/filter_settings"
+          android:orderInCategory="100"
+          app:showAsAction="never"/>
+    <item android:id="@+id/action_export_data"
+          android:title="@string/action_export_data"
+          android:orderInCategory="100"
+          app:showAsAction="never">
+        <menu>
+            <item android:id="@+id/action_export_csv"
+                  android:title="@string/action_data_format_csv"
+                  android:orderInCategory="100"
+                  app:showAsAction="never"/>
+            <item android:id="@+id/action_export_json"
+                  android:title="@string/action_data_format_json"
+                  android:orderInCategory="100"
+                  app:showAsAction="never"/>
+        </menu>
+    </item>
+    <item android:id="@+id/action_import_data"
+          android:title="@string/action_import_json"
+          android:orderInCategory="100"
+          app:showAsAction="never">
+        <menu>
+            <item android:id="@+id/action_import_csv"
+                  android:title="@string/action_data_format_csv"
+                  android:orderInCategory="100"
+                  app:showAsAction="never"/>
+            <item android:id="@+id/action_import_json"
+                  android:title="@string/action_data_format_json"
+                  android:orderInCategory="100"
+                  app:showAsAction="never"/>
+        </menu>
+    </item>
+    <item android:id="@+id/action_print_report"
+          android:title="@string/action_print_report"
+          android:orderInCategory="100"
+          app:showAsAction="never"/>
+    <item android:id="@+id/action_help"
+          android:title="@string/action_help"
+          android:orderInCategory="100"
+          app:showAsAction="never"/>
+</menu>

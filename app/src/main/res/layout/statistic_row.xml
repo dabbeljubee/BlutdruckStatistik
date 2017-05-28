@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/statistic_time"
+            android:layout_weight="0.3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+    <TextView
+            android:id="@+id/statistic_over_alarm"
+            android:layout_weight="0.175"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAlignment="textEnd"/>
+    <TextView
+            android:id="@+id/statistic_over_warning"
+            android:layout_weight="0.175"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAlignment="textEnd"/>
+    <TextView
+            android:id="@+id/statistic_over_low"
+            android:layout_weight="0.175"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAlignment="textEnd"/>
+    <TextView
+            android:id="@+id/statistic_under_low"
+            android:layout_weight="0.175"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAlignment="textEnd"/>
+</TableRow>

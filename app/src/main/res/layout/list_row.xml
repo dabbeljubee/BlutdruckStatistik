@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/list_date_time"
+            android:layout_weight="0.48"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAlignment="textStart"/>
+    <TextView
+            android:id="@+id/list_systolic_value"
+            android:gravity="right"
+            android:layout_weight="0.15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAlignment="textEnd"/>
+    <TextView
+            android:id="@+id/list_diastolic_value"
+            android:gravity="right"
+            android:layout_weight="0.15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAlignment="textEnd"/>
+    <TextView
+            android:id="@+id/list_pulse_value"
+            android:gravity="right"
+            android:layout_weight="0.15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAlignment="textEnd"/>
+    <TextView
+            android:id="@+id/list_comment"
+            android:gravity="right"
+            android:layout_weight="0.07"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAlignment="textEnd" android:cursorVisible="false" android:clickable="true"/>
+</TableRow>
